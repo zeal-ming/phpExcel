@@ -58,7 +58,7 @@ $layout->setShowVal($true);
 //生成图表
 $areas = new PHPExcel_Chart_PlotArea($layout,$series);
 $title = new PHPExcel_Chart_Title('高一学生成绩分布');
-// $legend = new PHPExcel_Chart_Legend(PHPExcel_Chart_Legend::POSITION_RIGHT,$layout,false);
+$legend = new PHPExcel_Chart_Legend(PHPExcel_Chart_Legend::POSITION_RIGHT,$layout,false);
 $yTitle =  new PHPExcel_Chart_Title("value(人数)");
 
 $chart = new PHPExcel_Chart(
@@ -68,7 +68,7 @@ $chart = new PHPExcel_Chart(
 	null,
 	$areas,
 	true,
-	false,
+	0,
 	null,
 	$yTitle
 	);
